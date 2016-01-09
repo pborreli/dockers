@@ -3,6 +3,7 @@ FROM php:7.0-cli
 RUN echo "date.timezone = Europe/Paris" >> /usr/local/etc/php/php.ini
 RUN echo "memory_limit = 512M" >> /usr/local/etc/php/php.ini
 RUN echo "realpath_cache_size = 4M" >> /usr/local/etc/php/php.ini
+
 RUN apt-get update \
     && apt-get install -y \
             git \
