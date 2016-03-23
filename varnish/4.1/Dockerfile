@@ -13,7 +13,3 @@ RUN apt-get update && apt-get install -y curl apt-transport-https \
     && make \
     && make install \
     && rm -rf /var/lib/apt/lists/*
-
-RUN echo "127.0.0.1 backend-web1 backend-web2" >> /etc/hosts \
-    && ping -c 4 backend-web1 \
-    && ping -c 4 backend-web2
