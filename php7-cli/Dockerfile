@@ -17,6 +17,7 @@ RUN apt-get update \
             libxml2-dev \
             libzzip-dev \
             libicu-dev \
+            libxslt-dev \
     && curl -L -o /tmp/apcu-5.1.2.tgz https://pecl.php.net/get/apcu-5.1.2.tgz \
         && tar xfz /tmp/apcu-5.1.2.tgz \
         && rm -r /tmp/apcu-5.1.2.tgz \
