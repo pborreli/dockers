@@ -21,7 +21,7 @@ RUN apt-get update \
         && tar xfz /tmp/apcu-5.1.2.tgz \
         && rm -r /tmp/apcu-5.1.2.tgz \
         && mv apcu-5.1.2 /usr/src/php/ext/apcu \
-    && docker-php-ext-install apcu bcmath iconv intl json mcrypt mbstring mysqli pdo_mysql pdo_sqlite opcache phar curl ftp hash session simplexml tokenizer xml xmlrpc zip \
+    && docker-php-ext-install apcu bcmath iconv intl json mcrypt mbstring mysqli pdo_mysql pdo_sqlite opcache phar xsl curl ftp hash session simplexml tokenizer xml xmlrpc zip \
        && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
        && docker-php-ext-install gd \
     && php -r "readfile('https://getcomposer.org/installer');" | php -- --install-dir=/usr/local/bin --filename=composer \
